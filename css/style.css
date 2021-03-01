@@ -32,26 +32,23 @@ header h1{
   margin: auto;
 }
 
-main .card{
+/* aspetto carta coperta */
+.card-off{
   width: 180px;
   height: 207px;
   border-radius: 10px;
   box-shadow: 1px 2px 4px 1px #888888;
   overflow: hidden;
-  float: left;
   margin: 20px 12px;
   display: inline-block;
   position: relative;
-}
-
-/* caratteristca di carta coperta */
-.card .off{
+  float: left;
   background-image: url('../img/pattern.png');
   background-size: contain;
 }
 
-/* al momento invisibile, carta scoperta */
-.card .on{
+/* aspetto carta scoperta */
+.card-on{
   display: none;
   background-color: white;
   background-size: 80%; 
@@ -59,49 +56,49 @@ main .card{
   background-position: 44% 26%;
 }
 
-/* azione che rende visibile la carta */
-.card:hover .on{
+/* funzione over su carta scoperta per vedere la carta */
+.card-off:hover .card-on{
   display: block;
-  margin: 0;
+  width: 180px;
+  height: 207px;
 }
 
 /* immagini delle carte scoperte */
-.card .card1{
+.raw .card1{
   background-image: url('../img/noun_air_balloon_3134741.png');
 }
 
-.card .card2{
+.raw .card2{
   background-image: url('../img/noun_Bicycle_3134821.png');
 }
 
-.card .card3{
+.raw .card3{
   background-image: url('../img/noun_Cruise_Ship_3134824.png');
 }
 
-.card .card4{
+.raw .card4{
   background-image: url('../img/noun_Submarine_3134738.png');
 }
 
-.card .card5{
+.raw .card5{
   background-image: url('../img/noun_Tractor_3134797.png');
 }
 
-.card .card6{
+.raw .card6{
   background-image: url('../img/noun_Tram_3134750.png');
 }
 
 /* carta di prova per vedere effetto testo colorato*/
-.card .special{
+.card-off.special{
   background-color: white;
   background-size: 80%; 
   background-repeat: no-repeat;
   background-position: 44% 26%;
   background-image: url('../img/noun_air_balloon_3134741.png');
-  margin: 0;
 }
 
 /* specifiche testo delle carte*/
-.card .text{
+.raw .text{
   position: absolute;
   bottom: 10px;
   width: 100%;
@@ -111,7 +108,7 @@ main .card{
 }
 
 /* funzione cambia colore al testo sulle carte */
-.card:hover .text{
+.raw:hover .text{
   color: #E67918;
 }
 
