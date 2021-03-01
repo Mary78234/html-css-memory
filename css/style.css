@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Nerko One', cursive;
+  text-align: center;
+  background-color: #ADD8E6;
+  width: 80%;
+  margin: auto;
+}
+
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* title in header */
+header h1{
+  color: white;
+  font-size: 85px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #888888;
+  line-height: 118px;
+}
+
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+main .card{
+  width: 180px;
+  height: 207px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 4px 1px #888888;
+  overflow: hidden;
+  float: left;
+  margin: 20px 12px;
+  display: inline-block;
+  position: relative;
+}
+
+/* caratteristca di carta coperta */
+.card .off{
+  background-image: url('../img/pattern.png');
+  background-size: contain;
+}
+
+/* al momento invisibile, carta scoperta */
+.card .on{
+  display: none;
+  background-color: white;
+  background-size: 80%; 
+  background-repeat: no-repeat;
+  background-position: 44% 26%;
+}
+
+/* azione che rende visibile la carta */
+.card:hover .on{
+  display: block;
+  margin: 0;
+}
+
+/* immagini delle carte scoperte */
+.card .card1{
+  background-image: url('../img/noun_air_balloon_3134741.png');
+}
+
+.card .card2{
+  background-image: url('../img/noun_Bicycle_3134821.png');
+}
+
+.card .card3{
+  background-image: url('../img/noun_Cruise_Ship_3134824.png');
+}
+
+.card .card4{
+  background-image: url('../img/noun_Submarine_3134738.png');
+}
+
+.card .card5{
+  background-image: url('../img/noun_Tractor_3134797.png');
+}
+
+.card .card6{
+  background-image: url('../img/noun_Tram_3134750.png');
+}
+
+/* carta di prova per vedere effetto testo colorato*/
+.card .special{
+  background-color: white;
+  background-size: 80%; 
+  background-repeat: no-repeat;
+  background-position: 44% 26%;
+  background-image: url('../img/noun_air_balloon_3134741.png');
+  margin: 0;
+}
+
+/* specifiche testo delle carte*/
+.card .text{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  font-size: 20px;
+  color: #E61986;
+  text-shadow: 1px 1px 2px #888888;
+}
+
+/* funzione cambia colore al testo sulle carte */
+.card:hover .text{
+  color: #E67918;
+}
+
+/* footer */
+footer{
+  font-size: 20px;
+  line-height: 50px;
+}
